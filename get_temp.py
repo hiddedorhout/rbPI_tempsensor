@@ -1,6 +1,8 @@
 # imports
 import os
 import time
+import sqlalchemy
+
 
 
 # connect to temp_sensor on GPIO on rbPI
@@ -21,10 +23,11 @@ def tempRead():
         temp_c = float(temp_string)/1000.0
         return round(temp_c, 1)
 
+
 # print temp and time values
 temperature = tempRead()
-print temperature
+# print temperature
 
 datetimeWrite = (time.strftime("%Y-%m-%d ") + time.strftime("%H:%M:%S"))
-print datetimeWrite
+# print datetimeWrite
 
