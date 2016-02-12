@@ -27,10 +27,10 @@ def tempRead():
 
 # print temp and time values
 temperature = tempRead()
-# print temperature
+print(temperature)
 
 datetimeWrite = (time.strftime("%Y-%m-%d ") + time.strftime("%H:%M:%S"))
-# print datetimeWrite
+print(datetimeWrite)
 
 # schedueled database write
 s = sched.scheduler(time.time, time.sleep)
