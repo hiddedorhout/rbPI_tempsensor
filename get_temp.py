@@ -2,6 +2,7 @@
 import os
 import time
 import sqlalchemy
+import sched
 
 
 
@@ -31,3 +32,5 @@ temperature = tempRead()
 datetimeWrite = (time.strftime("%Y-%m-%d ") + time.strftime("%H:%M:%S"))
 # print datetimeWrite
 
+# schedueled database write
+s = sched.scheduler(time.time, time.sleep)
